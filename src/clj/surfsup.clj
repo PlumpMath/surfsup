@@ -1,4 +1,4 @@
-(ns surfsup.core
+(ns surfsup
   (:require [cljs.repl :as repl]
             [hiccup.core :as hiccup]))
 
