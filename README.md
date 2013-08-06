@@ -23,9 +23,11 @@ A manual 'repl'.
 * let the browser connect
 * start visualizing your application
 
-    user> (require '[surfsup.core :as s])
-    nil
-    user> (def browser-env (s/make-browser-repl-env))
-    #'user/browser-env
-    user> (s/surfsup browser-env {:a 1 :b 2})
-    user> (s/surfsup browser-env browser-env)
+```clojure
+;; assuming you have a server serving a 
+;; page that calls clojure.browser.repl/connect
+(require '[surfsup.core :as s])
+(def browser-env (s/make-browser-repl-env))
+(s/surfsup browser-env {:a 1 :b 2})
+(s/surfsup browser-env browser-env)
+```
