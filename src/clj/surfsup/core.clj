@@ -14,6 +14,13 @@
                 [:dd (render-hiccup v)]])
              m)]))
 
+(extend-type clojure.lang.IPersistentVector
+  HiccupRenderable
+  (render-hiccup [v]
+    [:ol
+     (map (fn [e] [:li e]) v)]))
+
+
 (extend-type Object
   HiccupRenderable
   (render-hiccup [o] (str o)))
