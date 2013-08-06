@@ -43,6 +43,9 @@ lein repl
 (require 'dev)
 (dev/dev-start)
 
+(require 'clojure.java.browse)
+(clojure.java.browse/browse-url "http://localhost:8080/repl.html")
+
 (require '[surfsup :as s])
 (s/surfsup (dev/dev-context :repl) dev/dev-context)
 ```
