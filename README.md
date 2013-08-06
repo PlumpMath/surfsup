@@ -31,3 +31,18 @@ A manual 'repl'.
 (s/surfsup browser-env {:a 1 :b 2})
 (s/surfsup browser-env browser-env)
 ```
+
+You can also checkout the surfsup repository to explore examples
+```sh
+git clone https://github.com/musicalchair/surfsup.git
+cd surfsup
+lein repl
+```
+
+```clojure
+(require 'dev)
+(dev/dev-start)
+
+(require '[surfsup :as s])
+(s/surfsup (dev/dev-context :repl) dev/dev-context)
+```
